@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Movie List</string>
+    <string name="button_login">Login</string>
+    <string name="sign_in_now">Sign In Now</string>
+    <string name="name">Name</string>
+    <string name="hint_name">Enter Your Name</string>
+    <string name="email">Email</string>
+    <string name="hint_email">abc@example.com</string>
+    <string name="password">Password</string>
+    <string name="hint_password">Enter Your Password</string>
+    <string name="text_register">Don\'t have an Account?</string>
+    <string name="button_register">Register</string>
+    <string name="or">Or</string>
+    <string name="google_helper_text">Sign In With Google</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="register_helper_text">In Less Than a Minute</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="hint_confirm_password">Confirm Your Password</string>
+    <string name="text_login">Don\'t Have an Account?</string>
+</resources>
