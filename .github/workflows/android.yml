@@ -84,3 +84,9 @@ jobs:
       - name: Display AAB (App Bundle) Release - ${{ env.repository_name }} structure of downloaded files
         run: ls -R
         working-directory: ${{ env.main_project_module }}/build/outputs/bundle/release/
+        
+      # Upload generated apk to the artifacts.
+      - uses: actions/upload-artifact@v1
+        with:
+          name: release-apk
+          path: ${{ env.main_project_module }}/build/outputs/apk/release/app-release-unsigned.apk
