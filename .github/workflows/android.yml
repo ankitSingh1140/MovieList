@@ -5,9 +5,14 @@ env:
   main_project_module: app
 
 
+# This workflow is triggered on pushes to the repository.
+
 on:
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+  push:
+    branches:
+    - main
+    
+# on: push    # Default will running for every branch.
 
 jobs:
   build:
@@ -89,4 +94,4 @@ jobs:
       - uses: actions/upload-artifact@v1
         with:
           name: release-apk
-          path: ${{ env.main_project_module }}/build/outputs/apk/release/app-debug.apk
+          path: ${{ env.main_project_module }}/build/outputs/apk/debug/app-debug.apk
