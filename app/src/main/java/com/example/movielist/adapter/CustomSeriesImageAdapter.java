@@ -13,6 +13,7 @@ import com.example.movielist.databinding.ActivityMainBinding;
 import com.example.movielist.databinding.CustomMovieItemBinding;
 import com.example.movielist.models.movies.Movie;
 import com.example.movielist.models.series.Series;
+import com.example.movielist.network.RetrofitClientInstance;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -21,7 +22,7 @@ public class CustomSeriesImageAdapter extends RecyclerView.Adapter<CustomSeriesI
 
     Activity a;
     ActivityMainBinding activityMainBinding;
-    private static final String IMAGE_BASE_URL = "https://image.tmdb.org/t/p/original";
+    public String IMAGE_BASE_URL = RetrofitClientInstance.IMAGE_BASE_URL;
     List<Series> Series;
     public CustomSeriesImageAdapter(List<Series> Series, Activity a){
         this.a = a;
@@ -39,7 +40,6 @@ public class CustomSeriesImageAdapter extends RecyclerView.Adapter<CustomSeriesI
 
     @Override
     public void onBindViewHolder(@NonNull CustomSeriesImageViewHolder holder, int position) {
-        System.out.println(Series.get(position).poster_path);
         if (Series.get(holder.getAdapterPosition()).poster_path != null){
             Picasso.with(a).load(Uri.parse(IMAGE_BASE_URL + Series.get(holder.getAdapterPosition()).poster_path)).into(holder.posterImage);
         }

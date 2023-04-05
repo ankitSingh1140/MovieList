@@ -7,6 +7,7 @@ public class RetrofitClientInstance {
     private static Retrofit retrofit;
     static final String API_KEY = "ffcd34ba4c1c09782360bc491f2cc1d0";
     private static final String BASE_URL = "https://api.themoviedb.org/3/";
+    public static final String IMAGE_BASE_URL = "https://image.tmdb.org/t/p/original";
     public static Retrofit getRetrofitInstance() {
         if (retrofit == null) {
             retrofit = new retrofit2.Retrofit.Builder()

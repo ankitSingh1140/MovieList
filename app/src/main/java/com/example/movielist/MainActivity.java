@@ -32,4 +32,5 @@ public class MainActivity extends AppCompatActivity {
             fragmentTransaction.add(activityMainBinding.fragment1.getId(), Login.class, null).commit();
         }
     }
+
 }

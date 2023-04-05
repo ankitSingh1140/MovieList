@@ -56,18 +56,16 @@ public class HomeScreen extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding.movieItem.itemName.setText(R.string.movie);
-        binding.seriesItem.itemName.setText(R.string.series);
-        binding.movieItem.customItem.setBackgroundColor(Color.parseColor("#d7dcff"));
+        binding.movieItem.setCardBackgroundColor(Color.parseColor("#d7dcff"));
         setMovies();
-        binding.movieItem.customItem.setOnClickListener( v -> {
-            binding.movieItem.customItem.setBackgroundColor(Color.parseColor("#d7dcff"));
-            binding.seriesItem.customItem.setBackgroundColor(Color.TRANSPARENT);
+        binding.movieItem.setOnClickListener( v -> {
+            binding.movieItem.setCardBackgroundColor(Color.parseColor("#d7dcff"));
+            binding.seriesItem.setCardBackgroundColor(Color.TRANSPARENT);
             setMovies();
         });
-        binding.seriesItem.customItem.setOnClickListener(v -> {
-            binding.seriesItem.customItem.setBackgroundColor(Color.parseColor("#d7dcff"));
-            binding.movieItem.customItem.setBackgroundColor(Color.TRANSPARENT);
+        binding.seriesItem.setOnClickListener(v -> {
+            binding.seriesItem.setCardBackgroundColor(Color.parseColor("#d7dcff"));
+            binding.movieItem.setCardBackgroundColor(Color.TRANSPARENT);
             setSeries();
         });
         // Inflate the layout for this fragment

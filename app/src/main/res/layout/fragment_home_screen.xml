@@ -10,13 +10,13 @@
         android:id="@+id/nestedScrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/_20sdp"
         app:layout_constraintBottom_toTopOf="parent"
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_marginTop="@dimen/_30sdp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -25,13 +25,34 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <include
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
                     android:id="@+id/movieItem"
-                    layout="@layout/custom_item" />
-
-                <include
+                    android:layout_margin="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    app:cardCornerRadius="@dimen/_10sdp">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:text="@string/movie"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_gravity="center" />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
                     android:id="@+id/seriesItem"
-                    layout="@layout/custom_item" />
+                    android:layout_margin="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    app:cardCornerRadius="@dimen/_10sdp">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:text="@string/series"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_gravity="center" />
+                </androidx.cardview.widget.CardView>
             </androidx.appcompat.widget.LinearLayoutCompat>
 
             <include
@@ -43,9 +64,9 @@
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout2"
+        android:background="?attr/colorOnPrimary"
         android:layout_width="0dp"
-        android:layout_height="@dimen/_40sdp"
-        android:background="@android:color/transparent"
+        android:layout_height="@dimen/_30sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -68,7 +89,6 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/app_name"
-                    android:textColor="@color/black"
                     android:textSize="24sp"
                     android:textStyle="bold" />
             </androidx.appcompat.widget.LinearLayoutCompat>

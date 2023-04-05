@@ -29,4 +29,8 @@
     <string name="popular">Popular</string>
     <string name="nowPlaying">Now Playing</string>
     <string name="topRated">Top Rated</string>
+    <string name="ratings">Ratings: </string>
+    <string name="release_date">Release Date: </string>
+    <string name="recommended">Recommended</string>
+    <string name="similar">Similar</string>
 </resources>

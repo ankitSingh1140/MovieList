@@ -6,7 +6,7 @@ public class MovieDetails {
     public boolean adult;
     public String backdrop_path;
     public BelongsToCollection belongs_to_collection;
-    public int budget;
+    public Long budget;
     public ArrayList<Genre> genres;
     public String homepage;
     public int id;
@@ -19,7 +19,7 @@ public class MovieDetails {
     public ArrayList<ProductionCompany> production_companies;
     public ArrayList<ProductionCountry> production_countries;
     public String release_date;
-    public int revenue;
+    public Long revenue;
     public int runtime;
     public ArrayList<SpokenLanguage> spoken_languages;
     public String status;

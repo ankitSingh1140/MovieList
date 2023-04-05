@@ -11,6 +11,7 @@ import retrofit2.http.GET;
 import retrofit2.http.Path;
 
 public interface GetDataService {
+
     String API_KEY = RetrofitClientInstance.API_KEY;
 
     // Api Calls for Movies
@@ -30,7 +31,13 @@ public interface GetDataService {
     Call<Result> getMoviesCategories();
 
     @GET("movie/{movieId}?api_key="+API_KEY+"&language=en")
-    Call<MovieDetails> getMovieDetails(@Path("movieId") String movieId);
+    Call<MovieDetails> getMovieDetails(@Path("movieId") int movieId);
+
+    @GET("movie/{movieId}/recommendations?api_key="+API_KEY+"&language=en-US&page=1")
+    Call<MoviesRoot> getRecommendedMovies(@Path("movieId") int movieId);
+
+    @GET("movie/{movieId}/similar?api_key="+API_KEY+"&language=en-US&page=1")
+    Call<MoviesRoot> getSimilarMovies(@Path("movieId") int movieId);
 
     // Api Calls for Series
     @GET("genre/tv/list?api_key="+API_KEY+"&language=en")
